@@ -25,9 +25,15 @@ public class Stations {
         stations.add(new Station(new LatLng(10.413785105101141, -75.52402205765247), "Bazurto", "Bazurt"));
         stations.add(new Station(new LatLng(10.411143438926512, -75.51958668977021), "El Prado", "ELPrad"));
         stations.add(new Station(new LatLng(10.408994080244867, -75.5158232152462), "Maria Auxiliadora", "MraAux"));
-
+        stations.add(new Station(new LatLng(10.396693185159075, -75.47218400985003), "Patio Portal", "Portal"));
         stations.add(new Station(new LatLng(10.395318694414842, -75.47797355800867), "Madre Bernarda", "MadBer"));
-
+        stations.add(new Station(new LatLng(10.394422370176764, -75.48663575202227), "Castella", "Castel"));
+        stations.add(new Station(new LatLng(10.39940125718577, -75.49363665282726), "Ejecutivos", "Ejecut"));
+        stations.add(new Station(new LatLng(10.403626884266682, -75.49724891781807), "Villa Olimpica", "VillaO"));
+        stations.add(new Station(new LatLng(10.406428548343861, -75.50229046493769), "Cuatro Vientos", "Cuatro"));
+        stations.add(new Station(new LatLng(10.407331433313626, -75.50749864429235), "Líbanos", "Libano"));
+        stations.add(new Station(new LatLng(10.395099395308025, -75.4903781041503), "Los Angeles", "LosAng"));
+        stations.add(new Station(new LatLng(10.408296640177639, -75.5128898844123), "Barrio España", "Espana"));
     }
 
     public List<Station> getStations() {

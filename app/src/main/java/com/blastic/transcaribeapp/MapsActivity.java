@@ -20,6 +20,8 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
@@ -81,11 +83,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapClick(LatLng latLng) {
-        /*Polyline line = mMap.addPolyline(new PolylineOptions()
-                .add(new LatLng(10.425962, -75.5409435), new LatLng(10.424172, -75.5397531))
-                .width(5)
-                .color(Color.RED));*/
+        ArrayList<LatLng> points = new ArrayList<>();
+        points.add(new LatLng(10.396773319629565, -75.47219775617123));
+        points.add(new LatLng(10.397230052741575, -75.4725031927228));
+        points.add(new LatLng(10.39739230001117, -75.47267485409975));
+        points.add(new LatLng(10.39742428777592, -75.47282036393881));
+        points.add(new LatLng(10.397434510669116, -75.47291927039623));
+        points.add(new LatLng(10.3974328618154, -75.47299973666668));
+        points.add(new LatLng(10.397419011443814, -75.47307349741459));
+        points.add(new LatLng(10.397403512217746, -75.47314792871475));
+        points.add(new LatLng(10.397368556513575, -75.47323845326902));
+        points.add(new LatLng(10.397246871060027, -75.47361362725496));
+        points.add(new LatLng(10.396790137972623, -75.47458291053772));
+        points.add(new LatLng(10.396577765103716, -75.47513477504253));
+        points.add(new LatLng(10.396509832136909, -75.47527994960546));
+        points.add(new LatLng(10.396196219074277, -75.47615300863981));
+        points.add(new LatLng(10.395901402721899, -75.47684334218502));
+        points.add(new LatLng(10.395349033527266, -75.4779527708888));
+        points.add(new LatLng(10.395318694414842, -75.47803726047277));
 
+        for (int i = 0; i < points.size(); i++) {
+            LatLng startCoord = points.get(i);
+            if ((i + 1) < points.size()) {
+                LatLng endCoord = points.get((i + 1));
+                Polyline line = mMap.addPolyline(new PolylineOptions()
+                        .add(startCoord, endCoord)
+                        .width(5)
+                        .color(Color.RED));
+            }
+        }
 
         // We need an Editor object to make preference changes.
         // All objects are from android.context.Context
